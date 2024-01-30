@@ -19,7 +19,10 @@ First up languages!
 - C
 - VB
 
-Second, extensions!
+Second, libraries!
+- SSD1306 I2C oled library
+
+third, extensions!
 - CMAKE cus i mean duh
 -  Platform.io for the setting up and using of espressif framework code.
 - .net tools using the visual studio installer agent, this is to get VB support in visual studio
