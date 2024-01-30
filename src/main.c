@@ -8,6 +8,9 @@
 #include "driver/ledc.h"
 #include "esp_err.h"
 #include "ssd1306.h"
+#include ".commit_docs.sh"
+#include "../h_w_prompts/prompthandler.c"
+
 
 #define I2C_MASTER_SCL_IO 37        /*!< gpio number for I2C master clock */
 #define I2C_MASTER_SDA_IO 21        /*!< gpio number for I2C master data  */
@@ -20,7 +23,7 @@ void setup();
 
 void app_main(void)
 {       
-    setup();
+    setup_oled(I2C_MASTER_SCL_IO, I2C_MASTER_SDA_IO, I2C_MASTER_NUM, I2C_MASTER_FREQ_HZ);  
     
     ssd1306_dev = ssd1306_create(I2C_MASTER_NUM, SSD1306_I2C_ADDRESS);
     ssd1306_refresh_gram(ssd1306_dev);
